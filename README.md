@@ -81,5 +81,5 @@ http://{IP of Raspberry Pi}:10010
 
 
 ## Author
-👤 **Kyungmin Lee**
+👤 **Kyungmin Lee** (contact at 21500463@handong.edu)
 
