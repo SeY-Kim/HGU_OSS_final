@@ -1,1 +1,112 @@
-(Not updated)
+<html>
+<head>
+    <style>
+        body {background-image: url("data/back.jpeg"); text-align: center;}
+        .title { padding: 2%; border: 3px solid black; color:white; font-size: 4vw; font-weight: bolder;}
+        .subimg { width: 100%; height:100%;}
+        .img_map { width: 100%; height:100%;}
+        .blck_current { width: 40%; height: 50%; margin:5%; border: 1px solid black; display: inline-block; background-color: rgba(53, 56, 58, 0.5);  }
+        .blck_map { width: 40%; height: 60%;margin:5%; border: 1px solid black; width: 30%; display: inline-block;}
+        td { width:100%; height:100%; }
+        form {display: inline; }
+        .ref {font-size: 2.5vw; color: white;}
+    </style>
+    <script>
+        var city="Pohang";
+        function findCity(){
+            var ab_x = event.offsetX;
+            var ab_y = event.offsetY;
+            let map = document.querySelector('.img_map');
+            var width = map.offsetWidth;
+            var height = map.offsetHeight;
+            var rl_x = (ab_x / width).toFixed(2);
+            var rl_y = (ab_y / height).toFixed(2);
+            var isSeoul = (rl_x>=0.32) && (rl_x<=0.37) && (rl_y>=0.22) && (rl_y<=0.26);
+            var isIncheon = (rl_x>=0.26) && (rl_x<=0.31) && (rl_y>=0.22) && (rl_y<=0.26);
+            var isSuwon = (rl_x>=0.36) && (rl_x<=0.44) && (rl_y>=0.27) && (rl_y<=0.33);
+            var isGangneung = (rl_x>=0.72) && (rl_x<=0.78) && (rl_y>=0.17) && (rl_y<=0.23);
+            var isWonju = (rl_x>=0.52) && (rl_x<=0.60) && (rl_y>=0.27) && (rl_y<=0.33);
+            var isCheongju = (rl_x>=0.43) && (rl_x<=0.50) && (rl_y>=0.39) && (rl_y<=0.45);
+            var isCheonan = (rl_x>=0.31) && (rl_x<=0.37) && (rl_y>=0.37) && (rl_y<=0.43);
+            var isDaejeon = (rl_x>=0.43) && (rl_x<=0.49) && (rl_y>=0.48) && (rl_y<=0.54);
+            var isJeonju = (rl_x>=0.37) && (rl_x<=0.43) && (rl_y>=0.55) && (rl_y<=0.60);
+            var isYeosu = (rl_x>=0.46) && (rl_x<=0.52) && (rl_y>=0.77) && (rl_y<=0.83);
+            var isGwangju = (rl_x>=0.27) && (rl_x<=0.33) && (rl_y>=0.69) && (rl_y<=0.75);
+            var isPohang = (rl_x>=0.85) && (rl_x<=0.91) && (rl_y>=0.50) && (rl_y<=0.57);
+            var isDaegu = (rl_x>=0.69) && (rl_x<=0.75) && (rl_y>=0.55) && (rl_y<=0.61);
+            var isBusan = (rl_x>=0.84) && (rl_x<=0.90) && (rl_y>=0.60) && (rl_y<=0.66);
+            var isUlsan = (rl_x>=0.80) && (rl_x<=0.86) && (rl_y>=0.67) && (rl_y<=0.74);
+            var isChangwon = (rl_x>=0.70) && (rl_x<=0.76) && (rl_y>=0.66) && (rl_y<=0.72);
+            if(isSeoul)
+                city = "Seoul";
+            else if(isIncheon)
+                city = "Incheon";
+            else if(isSuwon)
+                city = "Suwon";
+            else if(isGangneung)
+                city = "Gangneung";
+            else if(isWonju)
+                city = "Wonju";
+            else if(isCheongju)
+                city = "Cheongju";
+            else if(isCheonan)
+                city = "Cheonan";
+            else if(isDaejeon)
+                city = "Daejeon";
+            else if(isJeonju)
+                city = "Jeonju";
+            else if(isYeosu)
+                city = "Yeosu";
+            else if(isGwangju)
+                city = "Gwangju";
+            else if(isPohang)
+                city = "Pohang";
+            else if(isDaegu)
+                city = "Daegu";
+            else if(isBusan)
+                city = "Busan";
+            else if(isUlsan)
+                city = "Ulsan";
+            else if(isChangwon)
+                city = "Changwon";
+            alert(city + "의 날씨를 확인합니다. 새로고침을 눌러주세요. ");
+            document.clickedmap.action = "/clickedmap";
+            var form = document.clickedmap;
+            form.city.value=city;
+            form.submit();
+        }
+    </script>
+</head><br>
+<br><br>
+<body>
+    <div class="title">
+        Real-time Weather Live
+    </div>
+    <div class="blck_current">
+        <table style="width: 100%; height:100%;">
+            <% for(var i =0 ; i<6; i++) { %>
+            <tr>
+                <% if(i==0){ %>
+                <td rowspan="6" style="width: 50%; height: 100%" >
+                    <img class="subimg" src = "<%= data[6] %>" >
+                </td>
+                <% } %>
+                <td style="width: 50%; height: 15%; text-align: center; color: rgb(236, 236, 236); font-weight: bolder; font-size: 2vw;"> 
+                    <%= data[i] %>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+    <form name = "clickedmap" method="get">
+        <input type="hidden" name = "city" >
+        <div class="blck_map">
+            <img onClick="findCity()" class="img_map" src = "data/map.jpg" style="border: 1px solid black; opacity: 0.85;">
+        </div>
+    </form>
+    <div class="ref">
+        원하시는 위치의 도시를 클릭해주세요. 수 초간 시간이 소요될 수 있습니다.<br>
+        데이터가 최신화 되지 않으면 새로고침을 눌러주세요.
+    </div>
+</body>
+</html>
