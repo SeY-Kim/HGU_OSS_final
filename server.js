@@ -1,7 +1,7 @@
 /*
 	HGU 20-1 OSS FINAL
 	21500463 Kyungmin Lee
-	Weather info API for node js web server
+	Weather information API for node js web server
 */
 
 var curr_weather;
@@ -30,11 +30,6 @@ app.listen(express_port, function(){
 });
 //3) web root page 설정
 app.get('/', function(req, res){
-	res.render('main', {
-		data: data
-	});
-});
-app.get('/clickedmap', function(req, res){
 	helper.getCurrentWeatherByCityName(curr_city, (err, curr) => {
 		if(err){
 			console.log(err);
@@ -50,6 +45,12 @@ app.get('/clickedmap', function(req, res){
 			console.log(data);
 		}
 	});
+	res.render('main', {
+		data: data
+	});
+});
+
+app.get('/clickedmap', function(req, res){
 	curr_city = req.query.city;
 	console.log(curr_city);
 	res.redirect('/');
