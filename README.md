@@ -9,7 +9,7 @@
 
 ## Prerequisites
 
-- nodejs >= 10.21.0  
+- node.js >= 10.21.0  
 
 
 
@@ -72,7 +72,7 @@ http://{IP of Raspberry Pi}:10010
 ## Reference 
 - OPEN API that offer real-time Weather data (need key)
 > https://openweathermap.org/
-- package using 'openweathermap' at nodejs (openweathermap-node)
+- Package using 'openweathermap' at nodejs (openweathermap-node)
 > https://www.npmjs.com/package/openweathermap-node
 - Guide to install nodejs at Rpi
 > https://itstory.tk/entry/Ubuntu-1604-nodejs-%EC%99%80-npm-%EC%84%A4%EC%B9%98  
