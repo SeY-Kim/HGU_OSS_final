@@ -45,7 +45,7 @@
 
 1. Install nodejs at Rpi
 ```sh
-sudo apt-get install nodejs
+$ sudo apt-get install nodejs
 ```
 2. Cloning this repository
 3. Run the Web server according to the 'Usage' below.  
@@ -55,15 +55,15 @@ sudo apt-get install nodejs
 
 ## Usage
 ```sh
-nodejs server
+$ nodejs server
 ```
 or
 ```sh
-node server
+$ node server
 ```
-Then, connect to the url below in your browser.
+Then, connect to the url below in your browser. (IP address+ port number)
 ```sh
-<IP of raspberry pi>:10010
+http://{IP of Raspberry Pi}:10010
 ```  
 
 
