@@ -8,8 +8,9 @@
 > https://www.youtube.com/watch?v=uCxfpS9ugtI
 
 ## Prerequisites
-
-- node.js >= 10.21.0  
+```sh
+ node.js >= 10.21.0 
+```
 
 
 
