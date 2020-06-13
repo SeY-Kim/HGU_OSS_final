@@ -16,19 +16,6 @@ const helper = new OpenWeatherMapHelper(
     }
 );
 
-
-
-// helper.getThreeHourForecastByCityName("Ansan", (err, threeHourForecast) => {
-//     if(err){
-//         console.log(err);
-//     }
-//     else{
-// 		console.log(threeHourForecast);
-// 		console.log(threeHourForecast.list[39].weather);
-//     }
-// });
- 
-
 //1) 모듈 동작 변수 선언 (express, ejs, fs)
 var express_port = 10010;
 var express = require('express');
