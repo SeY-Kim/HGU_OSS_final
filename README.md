@@ -22,9 +22,9 @@ However, some open nodejs package or weather data API is used.
 1) Use 'openweathermap' package that I want to use at npm (nodejs opensource library environment),
 2) Use open(free) weather information data that 'openweathermap' API offer every time server call.
 Below is the reference site associated with it.
->- OPEN API that offer real-time Weather data (need key)
+> -OPEN API that offer real-time Weather data (need key)
 > https://openweathermap.org/
->- Package using 'openweathermap' at nodejs (openweathermap-node)
+> -Package using 'openweathermap' at nodejs (openweathermap-node)
 > https://www.npmjs.com/package/openweathermap-node
 <br>
 
@@ -32,9 +32,8 @@ Below is the reference site associated with it.
 ## Prerequisites
 ```sh
  node.js >= 10.21.0 
-<br>
 ```
-
+<br>
 
 
 
