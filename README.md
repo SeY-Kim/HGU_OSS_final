@@ -12,22 +12,20 @@
 1. Write server code 'server.js' (using nodejs) importing 'openweathermaphelper' node module.
 2. Write/design web page 'main.ejs' using given data.
 3. Make server structure that return weather data(json type) everytime server call it. 
-4. Import node modules that server needs.
+4. Import node modules and use it where server needs.
 <br>
 
 
-## What I referenced from others
+## What I referenced 
 Did not use the open source project itself.
-1) Use 'openweathermap'  package that I want to use at npm (nodejs opensource library environment),
-2) Use open(free) weather information data that 'openweathermap' API offer.
-
-<br>Below is the reference site associated with it.
+However, some open nodejs package or weather data API is used.
+1) Use 'openweathermap' package that I want to use at npm (nodejs opensource library environment),
+2) Use open(free) weather information data that 'openweathermap' API offer every time server call.
+Below is the reference site associated with it.
 >- OPEN API that offer real-time Weather data (need key)
->> https://openweathermap.org/
+> https://openweathermap.org/
 >- Package using 'openweathermap' at nodejs (openweathermap-node)
->> https://www.npmjs.com/package/openweathermap-node
->- Guide to install nodejs at Rpi
->> https://itstory.tk/entry/Ubuntu-1604-nodejs-%EC%99%80-npm-%EC%84%A4%EC%B9%98  
+> https://www.npmjs.com/package/openweathermap-node
 <br>
 
 
